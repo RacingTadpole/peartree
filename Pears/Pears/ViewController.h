@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AudioTest.h"
 
 @interface ViewController : UIViewController
+- (IBAction)sliderX:(UISlider *)sender;
+- (IBAction)sliderY:(UISlider *)sender;
+- (IBAction)sliderZ:(UISlider *)sender;
+- (IBAction)goButton:(UIButton *)sender;
+
+@property (strong, nonatomic) IBOutlet AudioTest *audioModel;
 
 @end

@@ -21,6 +21,15 @@
 		8E8AD2581569DD8000114776 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8AD2361569DD7F00114776 /* Foundation.framework */; };
 		8E8AD2601569DD8000114776 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E8AD25E1569DD8000114776 /* InfoPlist.strings */; };
 		8E8AD2631569DD8000114776 /* PearsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD2621569DD8000114776 /* PearsTests.m */; };
+		8E93615C1569F11B00D34EF9 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E93615B1569F11B00D34EF9 /* sound.caf */; };
+		8E9361671569F47F00D34EF9 /* AudioTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9361661569F47F00D34EF9 /* AudioTest.m */; };
+		8E9361681569F47F00D34EF9 /* AudioTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9361661569F47F00D34EF9 /* AudioTest.m */; };
+		8E93616B1569F7F400D34EF9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E93616A1569F7F400D34EF9 /* AVFoundation.framework */; };
+		8E93616D1569F82700D34EF9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E93616C1569F82700D34EF9 /* OpenAL.framework */; };
+		8E93616F1569F83600D34EF9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E93616E1569F83600D34EF9 /* AudioToolbox.framework */; };
+		8E9361721569F8E400D34EF9 /* MyOpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E9361701569F8E400D34EF9 /* MyOpenALSupport.c */; };
+		8E9361731569F8E400D34EF9 /* MyOpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E9361701569F8E400D34EF9 /* MyOpenALSupport.c */; };
+		8E9361751569FC3300D34EF9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E9361741569FC3300D34EF9 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +63,15 @@
 		8E8AD25F1569DD8000114776 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8E8AD2611569DD8000114776 /* PearsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PearsTests.h; sourceTree = "<group>"; };
 		8E8AD2621569DD8000114776 /* PearsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PearsTests.m; sourceTree = "<group>"; };
+		8E93615B1569F11B00D34EF9 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		8E9361651569F47F00D34EF9 /* AudioTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioTest.h; path = ../AudioTest.h; sourceTree = "<group>"; };
+		8E9361661569F47F00D34EF9 /* AudioTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioTest.m; path = ../AudioTest.m; sourceTree = "<group>"; };
+		8E93616A1569F7F400D34EF9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8E93616C1569F82700D34EF9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		8E93616E1569F83600D34EF9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8E9361701569F8E400D34EF9 /* MyOpenALSupport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyOpenALSupport.c; sourceTree = "<group>"; };
+		8E9361711569F8E400D34EF9 /* MyOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpenALSupport.h; sourceTree = "<group>"; };
+		8E9361741569FC3300D34EF9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +79,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9361751569FC3300D34EF9 /* QuartzCore.framework in Frameworks */,
+				8E93616F1569F83600D34EF9 /* AudioToolbox.framework in Frameworks */,
+				8E93616D1569F82700D34EF9 /* OpenAL.framework in Frameworks */,
+				8E93616B1569F7F400D34EF9 /* AVFoundation.framework in Frameworks */,
 				8E8AD2351569DD7F00114776 /* UIKit.framework in Frameworks */,
 				8E8AD2371569DD7F00114776 /* Foundation.framework in Frameworks */,
 				8E8AD2391569DD7F00114776 /* CoreGraphics.framework in Frameworks */,
@@ -102,6 +124,10 @@
 		8E8AD2331569DD7F00114776 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E9361741569FC3300D34EF9 /* QuartzCore.framework */,
+				8E93616E1569F83600D34EF9 /* AudioToolbox.framework */,
+				8E93616C1569F82700D34EF9 /* OpenAL.framework */,
+				8E93616A1569F7F400D34EF9 /* AVFoundation.framework */,
 				8E8AD2341569DD7F00114776 /* UIKit.framework */,
 				8E8AD2361569DD7F00114776 /* Foundation.framework */,
 				8E8AD2381569DD7F00114776 /* CoreGraphics.framework */,
@@ -119,6 +145,11 @@
 				8E8AD2491569DD7F00114776 /* MainStoryboard_iPad.storyboard */,
 				8E8AD24C1569DD7F00114776 /* ViewController.h */,
 				8E8AD24D1569DD7F00114776 /* ViewController.m */,
+				8E9361651569F47F00D34EF9 /* AudioTest.h */,
+				8E9361661569F47F00D34EF9 /* AudioTest.m */,
+				8E9361701569F8E400D34EF9 /* MyOpenALSupport.c */,
+				8E9361711569F8E400D34EF9 /* MyOpenALSupport.h */,
+				8E9361591569F0FE00D34EF9 /* Resources */,
 				8E8AD23B1569DD7F00114776 /* Supporting Files */,
 			);
 			path = Pears;
@@ -152,6 +183,14 @@
 				8E8AD25E1569DD8000114776 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E9361591569F0FE00D34EF9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E93615B1569F11B00D34EF9 /* sound.caf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +266,7 @@
 				8E8AD23F1569DD7F00114776 /* InfoPlist.strings in Resources */,
 				8E8AD2481569DD7F00114776 /* MainStoryboard_iPhone.storyboard in Resources */,
 				8E8AD24B1569DD7F00114776 /* MainStoryboard_iPad.storyboard in Resources */,
+				8E93615C1569F11B00D34EF9 /* sound.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +304,8 @@
 				8E8AD2411569DD7F00114776 /* main.m in Sources */,
 				8E8AD2451569DD7F00114776 /* AppDelegate.m in Sources */,
 				8E8AD24E1569DD7F00114776 /* ViewController.m in Sources */,
+				8E9361671569F47F00D34EF9 /* AudioTest.m in Sources */,
+				8E9361721569F8E400D34EF9 /* MyOpenALSupport.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E8AD2631569DD8000114776 /* PearsTests.m in Sources */,
+				8E9361681569F47F00D34EF9 /* AudioTest.m in Sources */,
+				8E9361731569F8E400D34EF9 /* MyOpenALSupport.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +487,7 @@
 				8E8AD2681569DD8000114776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E8AD2691569DD8000114776 /* Build configuration list for PBXNativeTarget "PearsTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +496,7 @@
 				8E8AD26B1569DD8000114776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
