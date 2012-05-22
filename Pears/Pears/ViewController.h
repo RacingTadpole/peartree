@@ -14,7 +14,11 @@
 - (IBAction)sliderY:(UISlider *)sender;
 - (IBAction)sliderZ:(UISlider *)sender;
 - (IBAction)goButton:(UIButton *)sender;
+- (IBAction)musicButton:(UIButton *)sender;
 
 @property (strong, nonatomic) IBOutlet AudioTest *audioModel;
+@property (weak, nonatomic) IBOutlet UISlider *sliderX;
+@property (weak, nonatomic) IBOutlet UISlider *sliderY;
+@property (weak, nonatomic) IBOutlet UISlider *sliderZ;
 
 @end

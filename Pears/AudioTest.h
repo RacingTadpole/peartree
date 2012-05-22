@@ -21,9 +21,9 @@
 	ALCcontext*				context;
 	ALCdevice*				device;
     void*					data;
-
-    float                   x, y, z;
 }
+
+@property (nonatomic) float x,y,z;
 
 - (void)startSound;
 - (void)stopSound;

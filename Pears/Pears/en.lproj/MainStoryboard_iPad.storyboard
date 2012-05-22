@@ -15,21 +15,21 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Xth-wa-0RN">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" id="Xth-wa-0RN">
                                 <rect key="frame" x="325" y="142" width="257" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="sliderX:" destination="2" eventType="valueChanged" id="W0C-0R-FMM"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="aO6-aw-CGC">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" id="aO6-aw-CGC">
                                 <rect key="frame" x="325" y="190" width="257" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="sliderY:" destination="2" eventType="valueChanged" id="hnv-p0-N2C"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="jkA-Cv-WPI">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" id="jkA-Cv-WPI">
                                 <rect key="frame" x="325" y="240" width="257" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -58,10 +58,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yHJ-cE-4bX">
-                                <rect key="frame" x="348" y="346" width="72" height="37"/>
+                                <rect key="frame" x="323" y="346" width="124" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Go">
+                                <state key="normal" title="Sound effects">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,11 +72,29 @@
                                     <action selector="goButton:" destination="2" eventType="touchUpInside" id="VmX-PX-CBz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N95-1P-Xg8">
+                                <rect key="frame" x="321" y="405" width="127" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Choose music">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="musicButton:" destination="2" eventType="touchUpInside" id="tVk-tt-m36"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="audioModel" destination="OkE-kr-Www" id="WiG-Sc-LbF"/>
+                        <outlet property="sliderX" destination="Xth-wa-0RN" id="PPe-pu-ySO"/>
+                        <outlet property="sliderY" destination="aO6-aw-CGC" id="yth-Kx-1ub"/>
+                        <outlet property="sliderZ" destination="jkA-Cv-WPI" id="h1D-nr-JzI"/>
                     </connections>
                 </viewController>
                 <customObject id="OkE-kr-Www" customClass="AudioTest"/>
@@ -91,10 +109,14 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="goButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="musicButton:" candidateClass="UIButton"/>
                 <relationship kind="action" name="sliderX:" candidateClass="UISlider"/>
                 <relationship kind="action" name="sliderY:" candidateClass="UISlider"/>
                 <relationship kind="action" name="sliderZ:" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="audioModel" candidateClass="AudioTest"/>
+                <relationship kind="outlet" name="sliderX" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="sliderY" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="sliderZ" candidateClass="UISlider"/>
             </relationships>
         </class>
     </classes>

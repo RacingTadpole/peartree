@@ -18,6 +18,7 @@
 @end
 
 @implementation AudioTest
+@synthesize x,y,z;
 
 
 - (id)init
@@ -64,13 +65,32 @@
         x = 1.0;
         y = 1.0;
         z = 1.0;
-        NSLog(@"Initialising audio model.");
 		// Initialize our OpenAL environment
-		//[self initOpenAL];
-        NSLog(@"Complete.");
+		[self initOpenAL];
 	}
 	
 	return self;
+}
+
+#pragma mark Set location of source
+
+-(void) setX:(float)newValue {
+    x = newValue;
+    // Move our audio source coordinates
+    float sourcePosAL[] = {x, y, z};
+	alSourcefv(source, AL_POSITION, sourcePosAL);
+}
+-(void) setY:(float)newValue {
+    y = newValue;
+    // Move our audio source coordinates
+    float sourcePosAL[] = {x, y, z};
+	alSourcefv(source, AL_POSITION, sourcePosAL);
+}
+-(void) setZ:(float)newValue {
+    z = newValue;
+    // Move our audio source coordinates
+    float sourcePosAL[] = {x, y, z};
+	alSourcefv(source, AL_POSITION, sourcePosAL);
 }
 
 
@@ -83,15 +103,18 @@
 	ALsizei size;
 	ALsizei freq;
 	
-	NSBundle*				bundle = [NSBundle mainBundle];
+	NSBundle* bundle = [NSBundle mainBundle];
 	
 	// get some audio data from a wave file
-	CFURLRef fileURL = (__bridge CFURLRef)[NSURL fileURLWithPath:[bundle pathForResource:@"sound" ofType:@"caf"]];
+    // very strange - with a simple __bridge, this led to problems. But why is it __bridge_retained?
+	// CFURLRef fileURL = (__bridge_retained CFURLRef)[NSURL fileURLWithPath:[bundle pathForResource:@"sound" ofType:@"caf"]];
+    NSURL *fileNSURL = [NSURL fileURLWithPath:[bundle pathForResource:@"sound" ofType:@"caf"]];
+    CFURLRef fileURL = (__bridge CFURLRef) fileNSURL;
 	
 	if (fileURL)
 	{	
 		data = MyGetOpenALAudioData(fileURL, &size, &format, &freq);
-		CFRelease(fileURL);
+		//CFRelease(fileURL);
 		
 		if((error = alGetError()) != AL_NO_ERROR) {
 			NSLog(@"error loading sound: %x\n", error);
